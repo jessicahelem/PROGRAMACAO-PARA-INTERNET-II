@@ -1,0 +1,42 @@
+{
+  "users": [
+    {
+      "username": "Bret",
+      "website": "hildegard.org",
+      "name": "Leanne Graham",
+      "company": "{\\\"bs\\\": \\\"harness real-time e-markets\\\", \\\"name\\\": \\\"Romaguera-Crona\\\", \\\"catchPhrase\\\": \\\"Multi-layered client-server neural-net\\\"}",
+      "id": "1",
+      "phone": "1-770-736-8031 x56442",
+      "address": "{\\\"geo\\\": {\\\"lat\\\": \\\"-37.3159\\\", \\\"lng\\\": \\\"81.1496\\\"}, \\\"city\\\": \\\"Gwenborough\\\", \\\"suite\\\": \\\"Apt. 556\\\", \\\"street\\\": \\\"Kulas Light\\\", \\\"zipcode\\\": \\\"92998-3874\\\"}",
+      "email": "Sincere@april.biz"
+    },
+    {
+      "username": "Antonette",
+      "website": "anastasia.net",
+      "name": "Ervin Howell",
+      "company": "{\\\"bs\\\": \\\"synergize scalable supply-chains\\\", \\\"name\\\": \\\"Deckow-Crist\\\", \\\"catchPhrase\\\": \\\"Proactive didactic contingency\\\"}",
+      "id": "2",
+      "phone": "010-692-6593 x09125",
+      "address": "{\\\"geo\\\": {\\\"lat\\\": \\\"-43.9509\\\", \\\"lng\\\": \\\"-34.4618\\\"}, \\\"city\\\": \\\"Wisokyburgh\\\", \\\"suite\\\": \\\"Suite 879\\\", \\\"street\\\": \\\"Victor Plains\\\", \\\"zipcode\\\": \\\"90566-7771\\\"}",
+      "email": "Shanna@melissa.tv"
+    },
+    {
+      "username": "Samantha",
+      "website": "ramiro.info",
+      "name": "Clementine Bauch",
+      "company": "{\\\"bs\\\": \\\"e-enable strategic applications\\\", \\\"name\\\": \\\"Romaguera-Jacobson\\\", \\\"catchPhrase\\\": \\\"Face to face bifurcated interface\\\"}",
+      "id": "3",
+      "phone": "1-463-123-4447",
+      "address": "{\\\"geo\\\": {\\\"lat\\\": \\\"-68.6102\\\", \\\"lng\\\": \\\"-47.0653\\\"}, \\\"city\\\": \\\"McKenziehaven\\\", \\\"suite\\\": \\\"Suite 847\\\", \\\"street\\\": \\\"Douglas Extension\\\", \\\"zipcode\\\": \\\"59590-4157\\\"}",
+      "email": "Nathan@yesenia.net"
+    },
+    {
+      "username": "Karianne",
+      "website": "kale.biz",
+      "name": "Patricia Lebsack",
+      "company": "{\\\"bs\\\": \\\"transition cutting-edge web services\\\", \\\"name\\\": \\\"Robel-Corkery\\\", \\\"catchPhrase\\\": \\\"Multi-tiered zero tolerance productivity\\\"}",
+      "id": "4",
+      "phone": "493-170-9623 x156",
+      "address": "{\\\"geo\\\": {\\\"lat\\\": \\\"29.4572\\\", \\\"lng\\\": \\\"-164.2990\\\"}, \\\"city\\\": \\\"South Elvis\\\", \\\"suite\\\": \\\"Apt. 692\\\", \\\"street\\\": \\\"Hoeger Mall\\\", \\\"zipcode\\\": \\\"53919-4257\\\"}",
+      "email": "Julianne.OConner@kory.org"
+    }]}

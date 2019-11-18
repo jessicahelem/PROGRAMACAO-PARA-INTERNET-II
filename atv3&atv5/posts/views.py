@@ -2,6 +2,7 @@ from typing import Type
 
 from django.shortcuts import render
 from django.template.defaulttags import comment
+from rest_framework.generics import GenericAPIView
 
 from posts.models import *
 import json
@@ -20,7 +21,6 @@ class AddressList(generics.ListCreateAPIView):
     queryset = Address.objects.all()
     serializer_class = AddressSerializer
     name = 'adress-list'
-
 
 
 class AdressDetails(generics.RetrieveUpdateDestroyAPIView):
@@ -65,15 +65,17 @@ class CommentDetails(generics.RetrieveUpdateDestroyAPIView):
     name = 'comment-details'
 
 
-class ProfilePostList(generics.RetrieveUpdateDestroyAPIView):
+class ProfilePostList(generics.ListCreateAPIView):
     queryset = Profile.objects.all()
     serializer_class = ProfilePostSerializer
     name = 'profile-posts-list'
-    
+
+
 class ProfilePostDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Profile.objects.all()
     serializer_class = ProfilePostSerializer
-    name='profile-post-detail'
+    name = 'profile-post-detail'
+
 
 class PostCommentList(generics.ListCreateAPIView):
     queryset = Post.objects.all()
@@ -83,16 +85,14 @@ class PostCommentList(generics.ListCreateAPIView):
 
 class PostCommentDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Post.objects.all()
-    serializer_class =  PostCommentSerializer
+    serializer_class = PostCommentSerializer
     name = 'post-comment-detail'
+
 
 class PostCommentDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Post.objects.all()
-    serializer_class =  PostCommentSerializer
+    serializer_class = PostCommentSerializer
     name = 'post-comment-detail'
-
-
-
 
 
 class ApiRoot(generics.GenericAPIView):
@@ -105,11 +105,10 @@ class ApiRoot(generics.GenericAPIView):
             'posts': reverse(PostList.name, request=request),
             'profile-posts': reverse(ProfilePostList.name, request=request),
             'comments': reverse(PostCommentList.name, request=request),
-           # 'profile-count:': reverse(ProfileCount.name, request=request),
         })
 
-def import_archive():
 
+def import_archive():
     with open("comments.json", "r") as read_file:
         data = json.load(read_file)
 
@@ -119,7 +118,7 @@ def import_archive():
     with open("posts.json", "r") as read_file:
         data2 = json.load(read_file)
 
-    with open("address.json","r") as read_file:
+    with open("address.json", "r") as read_file:
         data3 = json.load(read_file)
 
     for i in range(len(data['comments'])):
@@ -130,7 +129,6 @@ def import_archive():
         comments.id = data['comments'][i]["id"]
         comments.name = data['comments'][i]["name"]
         comments.save()
-
 
     for i in range(len(data2['posts'])):
         posts = Post()
@@ -150,4 +148,5 @@ def import_archive():
 
         for post in data2['posts']:
             profile = Profile.objects.get(id=post['userId'])
-            Comment.objects.create(id=comment['id'],name = comment['name'],email=comment['email'],body=comment['body'],post=post)
+            Comment.objects.create(id=comment['id'], name=comment['name'], email=comment['email'], body=comment['body'],
+                                   post=post)
